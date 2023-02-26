@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="548.0" prefWidth="911.0"
+            xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.kursach.controller.orderController.OrderListController">
+   <children>
+      <VBox layoutX="230.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="orderInfoTableView" prefHeight="550.0" prefWidth="911.0">
+              <columns>
+                <TableColumn fx:id="orderIdColumn" prefWidth="86.39999389648438" text="ID перевозки" />
+                <TableColumn fx:id="orderDistanceColumn" prefWidth="77.5999755859375" text="Дистанция" />
+                  <TableColumn fx:id="orderStartPointColumn" prefWidth="87.2000732421875" text="От куда" />
+                  <TableColumn fx:id="orderEndPointColumn" prefWidth="86.39996337890625" text="Куда" />
+                  <TableColumn fx:id="orderCoastColumn" prefWidth="75.0" text="Стоимость" />
+                  <TableColumn fx:id="orderAutoNumColumn" prefWidth="177.5999755859375" text="Автомобиль" />
+                  <TableColumn fx:id="orderDriverColumn" prefWidth="188.00006103515625" text="Водитель" />
+                  <TableColumn fx:id="orderFuelColumn" prefWidth="58.39990234375" text="Топливо" />
+                  <TableColumn fx:id="orderFuelVolumeColumn" prefWidth="77.60009765625" text="Объем" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

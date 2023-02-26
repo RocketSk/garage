@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="355.0" prefWidth="351.0"
+            xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.kursach.controller.fuelController.ChangeFuelBalanceController">
+   <children>
+      <VBox alignment="CENTER" layoutX="192.0" layoutY="86.0" prefHeight="452.0" prefWidth="351.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите тип топлива">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Text>
+            <ComboBox fx:id="fuelTypeBox" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Укажите число (литров) которое нужно прибавить">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Text>
+            <TextField fx:id="fuelCountToPlusField" prefHeight="26.0" prefWidth="272.0">
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Text layoutX="170.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Укажите число (литров) которое нужно отнять">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Text>
+            <TextField fx:id="fuelCountToSubField" layoutX="110.0" layoutY="128.0" prefHeight="26.0" prefWidth="462.0">
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox alignment="CENTER" prefHeight="64.0" prefWidth="351.0">
+               <children>
+                  <Button minHeight="30.0" mnemonicParsing="false" onAction="#plusFuel" prefWidth="130.0" text="Прибавить" />
+                  <Button minHeight="30.0" mnemonicParsing="false" onAction="#subFuel" prefWidth="130.0" text="Отнять" />
+               </children>
+               <opaqueInsets>
+                  <Insets top="20.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="351.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="130.0" text="Отмена" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

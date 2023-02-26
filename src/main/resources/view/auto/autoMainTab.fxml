@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.controller.autoController.AutoMainTabController">
+
+    <children>
+        <BorderPane layoutX="40.0" prefHeight="415.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <VBox prefHeight="442.0" prefWidth="152.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#getAddAutoPage" prefHeight="60.0" prefWidth="152.0" text="Добавить автомобиль" />
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#getUpdateAutoPage" prefHeight="60.0" prefWidth="152.0" text="Изменить автомобиль" />
+                        <Button layoutX="10.0" layoutY="159.0" mnemonicParsing="false" onAction="#getDeleteAutoPage" prefHeight="60.0" prefWidth="152.0" text="Удалить автомобиль" />
+                        <Button layoutX="10.0" layoutY="159.0" mnemonicParsing="false" onAction="#getAutoByIDPage" prefHeight="60.0" prefWidth="152.0" text="Поиск автомобиля по ID" />
+                        <Button mnemonicParsing="false" onAction="#getAllAutoPage" prefHeight="60.0" prefWidth="152.0" text="Все автомобили" />
+                    </children>
+                </VBox>
+            </left>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="БЫСТРЫЙ ПОИСК АВТО ПО НОМЕРУ">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="autoNumField" alignment="TOP_LEFT" promptText="Введите номер автомобиля для получения информации">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ListView fx:id="autoInfoListView" prefHeight="342.0" prefWidth="511.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ListView>
+                  <Button mnemonicParsing="false" onAction="#showAutoInfo" prefHeight="37.0" prefWidth="182.0" text="Поиск" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
