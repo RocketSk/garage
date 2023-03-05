@@ -1,8 +1,10 @@
 package com.kursach.model;
 
 import lombok.*;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Auto {
+public class Auto implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,9 +35,9 @@ public class Auto {
     @JoinColumn(name = "FUEL_ID")
     private Fuel fuel;
 
-    @OneToMany(fetch = FetchType.LAZY, orphanRemoval = true, cascade = CascadeType.ALL)
-    @JoinColumn(name = "AUTO_ID")
+    @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.PERSIST)
     @ToString.Exclude
+    @JoinColumn(name = "AUTO_ID")
     private List<Driver> drivers = new ArrayList<>();
 
     @Override
