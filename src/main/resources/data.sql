@@ -9,3 +9,5 @@ INSERT INTO auto (BRAND, MODEL, NUM, FUEL_ID) VALUES ('Scania', 'kakw00', '8202-
 
 INSERT INTO drivers (AUTO_NUM, FATHERS_NAME, FIRST_NAME, LAST_NAME, auto_ID) VALUES ('1234-IA7', 'ssf', 'sadaf', 'sadfa', '1');
 INSERT INTO drivers (AUTO_NUM, FATHERS_NAME, FIRST_NAME, LAST_NAME, auto_ID) VALUES ('1234-IA7', '123', 'sadaf', 'sadfa', '1');
+
+INSERT INTO user (PASSWORD, USERNAME) VALUES ('admin', 'admin');

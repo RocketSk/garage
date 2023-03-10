@@ -30,5 +30,6 @@
         <mapping class="com.kursach.model.Auto"/>
         <mapping class="com.kursach.model.Fuel"/>
         <mapping class="com.kursach.model.Order"/>
+        <mapping class="com.kursach.model.User"/>
     </session-factory>
 </hibernate-configuration>

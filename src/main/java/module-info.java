@@ -32,6 +32,8 @@ module com.kursach {
     exports com.kursach.controller.mainController;
     exports com.kursach.controller.orderController;
     exports com.kursach.controller.fuelController;
+    exports com.kursach.controller.userController;
+
     exports com.kursach.model;
     exports com.kursach.util;
     opens com.kursach.util to javafx.fxml;
@@ -41,5 +43,6 @@ module com.kursach {
     opens com.kursach.controller.mainController to javafx.fxml;
     opens com.kursach.controller.orderController to javafx.fxml;
     opens com.kursach.controller.fuelController to javafx.fxml;
+    opens com.kursach.controller.userController to javafx.fxml;
 }
 

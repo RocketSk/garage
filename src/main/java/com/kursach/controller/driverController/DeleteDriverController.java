@@ -42,6 +42,8 @@ public class DeleteDriverController {
         alert.setHeaderText("Успешно");
         alert.setContentText("Водитель успешно удален");
         alert.showAndWait();
+        Stage stage = (Stage) driverIdField.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
